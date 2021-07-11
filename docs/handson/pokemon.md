@@ -41,23 +41,32 @@ npm run start
 
 ```json
 {
-    "eslint.autoFixOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "eslint.options": {
         "configFile": "./.eslintrc.js"
-    },
-    "eslint.validate": [
-        "javascript",
-        {
-            "language": "typescript",
-            "autoFix": true
-        }
-    ]
+    }
 }
 ```
 
-![](https://i.imgur.com/YXrogHY.jpg)
+![](https://i.imgur.com/KCVg59t.jpg)
 
 ファイルを保存する際に ESLint ルールを自動的に適用できる
+
+### コミット時にコードを自動整形する `editor.codeActionsOnSave`
+
+かつての `eslint.autoFixOnSave` は廃止されたので注意が必要
+
+### `.eslintrc.js` の ESLint 設定を読み込む `eslint.options`
+
+`eslint.validate` を書く必要があったが `.eslintrc.js` に適切な設定があれば TypeScript や Vue 、 HTML ファイルも検証する
+
+下記以外のファイルで ESLint を使いたい時は引き続き `eslint.validate` 設定が必要です
+
+- TypeScript ... カスタムパーサとして `@typescript-eslint/parser` が設定されている
+- HTML ... プラグインの設定に `eslint-plugin-html` が存在する
+- Vue ... プラグインの設定に `eslint-plugin-vue` が存在する
 
 ## API をフェッチする
 
