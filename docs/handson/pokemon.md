@@ -102,6 +102,78 @@ return (
 )
 ```
 
+ポケモンの名前が表示されたことを確認できれば OK
+
+## コンポーネント設計
+
+一つひとつのポケモンをその画像も合わせて表示したい
+
+```tsx
+return (
+    <React.Fragment>
+        {data.results.map((pokemon: { name: string; url: string }) => (
+            <div key={pokemon.name}>
+                <a
+                    href={`https://www.pokemon.com/us/pokedex/${props.pokemon.name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        alt={`${props.pokemon.name} image`}
+                        src={`https://img.pokemondb.net/artwork/large/${props.pokemon.name}.jpg`}
+                    />
+                    <div>
+                        {props.pokemon.name}
+                    </div>
+                </a>
+            </div>
+        ))}
+    </React.Fragment>
+)
+```
+
+一つのコンポーネントでも問題は無いが、それを肥大化させ過ぎてもコード全体の見通しが悪くなるばかり
+
+```tsx
+export const Card = (props: { pokemon: { name: string; url: string } }) => {
+    return (
+        <a
+            href={`https://www.pokemon.com/us/pokedex/${props.pokemon.name}`}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                alt={`${props.pokemon.name} image`}
+                src={`https://img.pokemondb.net/artwork/large/${props.pokemon.name}.jpg`}
+            />
+            <div>
+                {props.pokemon.name}
+            </div>
+        </a>
+    )
+}
+```
+
+作った Card コンポーネントを読み込む
+
+```tsx
+import { Card } from './components/Card'
+```
+
+props に `pokemon` を渡す
+
+```tsx
+return (
+    <React.Fragment>
+        {data.results.map((pokemon: { name: string; url: string }) => (
+            <div key={pokemon.name}>
+                <Card pokemon={pokemon} />
+            </div>
+        ))}
+    </React.Fragment>
+)
+```
+
 ## 参照リポジトリ
 
 - [https://github.com/jiyuujin/pokemon](https://github.com/jiyuujin/pokemon)
