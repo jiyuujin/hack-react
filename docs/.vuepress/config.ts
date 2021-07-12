@@ -33,7 +33,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         {
           text: `Pokemon アプリ`,
           children: [
-            `/`,
             `/handson/pokemon.md`
           ]
         }
