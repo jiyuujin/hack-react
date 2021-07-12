@@ -183,6 +183,77 @@ return (
 )
 ```
 
+## 検索する
+
+状態管理の手段に Hooks API のひとつ `useState` を利用して、親コンポーネント側 `searchText` という名目で検索ワードを保持する
+
+```tsx
+const [searchText, setSearchText] = React.useState<string>('')
+
+return (
+    <Search text={searchText} setText={handleInputClick} />
+)
+```
+
+Input フォームを作成する
+
+今回 [nekohack-ui](https://github.com/jiyuujin/nekohack-ui) を利用したが、フォーム Input を作ることができれば何でも良い
+
+```tsx
+import { NekoInput } from 'nekohack-ui'
+
+export const Search = (props: { text: string; setText: Function }) => {
+    return (
+        <NekoInput
+            value={props.text}
+            placeholder="検索してください"
+            onChange={props.setText}
+        />
+    )
+}
+```
+
+作成した Search コンポーネントを読み込む
+
+保持した `searchText` をリストの結果に反映させるため Hooks API のひとつ `useMemo` で再描画する
+
+```tsx
+import { Card } from './Card'
+
+export const CardList = (props: { data: Array<{ name: string; url: string }>; search: string }) => {
+    const pokemonData = React.useMemo(() => {
+        if (props.search) {
+            return props.data.filter(
+                (pokemon: { name: string; url: string }) =>
+                    pokemon.name.indexOf(props.search) !== -1
+            )
+        }
+        return props.data
+    }, [props])
+
+    return (
+        <>
+            {pokemonData?.map((pokemon: { name: string; url: string }) => (
+                <div key={pokemon.name}>
+                    <Card pokemon={pokemon} />
+                </div>
+            ))}
+        </>
+    )
+}
+```
+
+検索ワードと合わせて親コンポーネント側で呼び出せば良い
+
+```tsx
+const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon?limit=200&offset=200`)
+const [searchText, setSearchText] = React.useState<string>('')
+
+return (
+    <CardList data={data.results} search={searchText} />
+)
+```
+
 ## 参照リポジトリ
 
 - [https://github.com/jiyuujin/pokemon](https://github.com/jiyuujin/pokemon)
