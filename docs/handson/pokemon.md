@@ -84,7 +84,7 @@ curl https://pokeapi.co/api/v2/pokemon
 npm install swr
 ```
 
-今回は [swr](https://swr.vercel.app) の `useSWR` hooks を利用してデータをフェッチする
+今回は [swr](https://swr.vercel.app) の `useSWR` Hooks を利用してデータをフェッチする
 
 ```tsx
 const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon?limit=200&offset=200`)
