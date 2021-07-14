@@ -43,9 +43,6 @@ npm run start
 {
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    },
-    "eslint.options": {
-        "configFile": "./.eslintrc.js"
     }
 }
 ```
@@ -67,6 +64,84 @@ npm run start
 - TypeScript ... カスタムパーサとして `@typescript-eslint/parser` が設定されている
 - HTML ... プラグインの設定に `eslint-plugin-html` が存在する
 - Vue ... プラグインの設定に `eslint-plugin-vue` が存在する
+
+## ESLint 開発環境を構築する
+
+::: warning create-react-app より始められた方は
+create-react-app によって作成された React プロジェクトでは ESLint が含まれていないため、別途 ESLint 開発環境を構築する必要がある
+:::
+
+一般的な React は `eslint-plugin-react` を、また TypeScript で書く場合は `@typescript-eslint/eslint-plugin` をインストールする必要がある
+
+さらに Hooks をベースにしている場合は `eslint-plugin-react-hooks` もインストールした方が良い
+
+```bash
+npm install -D eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/parser
+```
+
+プロジェクトルートに `.eslintrc.js` という名目で作成する
+
+```bash
+touch .eslintrc.js
+```
+
+`.eslintrc.js` に下記コードをコピー・ペーストする
+
+```js
+'use strict'
+
+module.exports = {
+    extends: [
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended'
+    ],
+    plugins: [
+        '@typescript-eslint',
+        'react',
+        'react-hooks'
+    ],
+    root: true,
+    env: { node: true, es6: true },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        sourceType: 'module',
+        ecmaFeatures: {
+            jsx: true
+        }
+    },
+    settings: {
+        react: {
+            version: 'detect'
+        }
+    }
+}
+```
+
+`.eslintrc.js` を作成した後 `setting.json` に `eslint.options` の configuration を追加する
+
+```json
+{
+    "eslint.options": {
+        "configFile": "./.eslintrc.js"
+    }
+}
+```
+
+これで各プロジェクト、コミット時にコードを自動整形してくれる
+
+### ESLint コマンドを利用する
+
+VSCode に任せず手動でも自動整形してくれるが `eslint <対象ディレクトリ> --ext <拡張子>` という書き方に則って ESLint コマンドを利用できる
+
+```bash
+# ESLint warnings / errors をリストアップする
+eslint ./ --ext ts,tsx
+
+# ESLint Warnings / errors を自動整形してくれる
+eslint ./ --ext ts,tsx --fix
+```
+
+CI (Github Actions, Circle CI, etc) においてこの方法を使えるので、興味のある方は是非とも試して欲しい
 
 ## API をフェッチする
 
