@@ -258,3 +258,11 @@ return (
 
 - [https://github.com/jiyuujin/pokemon](https://github.com/jiyuujin/pokemon)
 - [https://github.com/nekohack-oss/cra-app](https://github.com/nekohack-oss/cra-app)
+
+### 補足
+
+React を書く際なぜ関数コンポーネントを使うべきか、また今回扱わなかった `useEffect` についても書かせていただいた。
+
+下記アンサー記事も合わせてチェックいただければ幸いです。
+
+[アンサー記事 - ポケモンと共に React を学ぶ](https://webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
