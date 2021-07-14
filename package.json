@@ -8,7 +8,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "vuepress": "^2.0.0-beta.21"
+    "vuepress": "^2.0.0-beta.22"
   },
   "devDependencies": {
     "@types/node": "^16.3.1",
