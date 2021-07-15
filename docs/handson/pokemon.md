@@ -153,13 +153,15 @@ curl https://pokeapi.co/api/v2/pokemon
 {"count":1118,"next":"https://pokeapi.co/api/v2/pokemon?offset=20&limit=20","previous":null,"results":[{"name":"bulbasaur","url":"https://pokeapi.co/api/v2/pokemon/1/"},{"name":"ivysaur","url":"https://pokeapi.co/api/v2/pokemon/2/"},{"name":"venusaur","url":"https://pokeapi.co/api/v2/pokemon/3/"},{"name":"charmander","url":"https://pokeapi.co/api/v2/pokemon/4/"},{"name":"charmeleon","url":"https://pokeapi.co/api/v2/pokemon/5/"},{"name":"charizard","url":"https://pokeapi.co/api/v2/pokemon/6/"},{"name":"squirtle","url":"https://pokeapi.co/api/v2/pokemon/7/"},{"name":"wartortle","url":"https://pokeapi.co/api/v2/pokemon/8/"},{"name":"blastoise","url":"https://pokeapi.co/api/v2/pokemon/9/"},{"name":"caterpie","url":"https://pokeapi.co/api/v2/pokemon/10/"},{"name":"metapod","url":"https://pokeapi.co/api/v2/pokemon/11/"},{"name":"butterfree","url":"https://pokeapi.co/api/v2/pokemon/12/"},{"name":"weedle","url":"https://pokeapi.co/api/v2/pokemon/13/"},{"name":"kakuna","url":"https://pokeapi.co/api/v2/pokemon/14/"},{"name":"beedrill","url":"https://pokeapi.co/api/v2/pokemon/15/"},{"name":"pidgey","url":"https://pokeapi.co/api/v2/pokemon/16/"},{"name":"pidgeotto","url":"https://pokeapi.co/api/v2/pokemon/17/"},{"name":"pidgeot","url":"https://pokeapi.co/api/v2/pokemon/18/"},{"name":"rattata","url":"https://pokeapi.co/api/v2/pokemon/19/"},{"name":"raticate","url":"https://pokeapi.co/api/v2/pokemon/20/"}]}
 ```
 
-[swr](https://swr.vercel.app) をインストールする
+今回使う [swr](https://swr.vercel.app) は stale-while-revalidate と呼ばれるキャッシュ戦略に基づいたデータフェッチライブラリで React のカスタムフックとして提供されている
+
+[RFC-5861](https://www.rfc-editor.org/rfc/rfc5861.html) で策定された効率的な HTTPCache-Control を実現するための戦略で、指定された期間に行われるキャッシュの再検証中は古いキャッシュを返す
 
 ```bash
 npm install swr
 ```
 
-今回は [swr](https://swr.vercel.app) の `useSWR` Hooks を利用してデータをフェッチする
+今回は [swr](https://swr.vercel.app) の React カスタムフック `useSWR` を利用してデータをフェッチする
 
 ```tsx
 const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon?limit=200&offset=200`)
