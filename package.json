@@ -8,6 +8,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "vue-google-adsense": "^1.9.3",
     "vuepress": "^2.0.0-beta.22"
   },
   "devDependencies": {
