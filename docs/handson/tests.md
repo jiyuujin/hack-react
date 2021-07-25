@@ -128,13 +128,15 @@ module.exports = 'test-file-stub'
 
 改めて `npm run test` を実行すると、上手くテストが動作していることを確認できる
 
-### Testing Library を追加する
+### React Testing Library を追加する
 
 `@testing-library/react` をインストールする
 
 ```bash
 npm install -D @testing-library/react
 ```
+
+ここで React Testing Library 自体にも明確な担当領域を持つため Jest の代わりとして使うことはありません
 
 ## テスト課題
 
