@@ -5,7 +5,18 @@ export default defineUserConfig<DefaultThemeOptions>({
   title: `Hack React`,
   description: `ミートアップやハンズオンでご紹介のあった資料を中心に記録しています。`,
   head: [
-    //
+    [
+      `script`,
+      {},
+      `(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-7095980629133842", enable_page_level_ads: true });`
+    ],
+    [
+      `script`,
+      {
+        async: true,
+        src: `//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js`
+      }
+    ]
   ],
   base: `/`,
   themeConfig: {
