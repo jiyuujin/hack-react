@@ -16,6 +16,10 @@ export default defineUserConfig<DefaultThemeOptions>({
       {
         text: `Pokemon アプリ`,
         link: `/handson/pokemon.md`,
+      },
+      {
+        text: `ユニットテスト`,
+        link: `/handson/tests.md`,
       }
     ],
     sidebarDepth: 3,
@@ -25,7 +29,8 @@ export default defineUserConfig<DefaultThemeOptions>({
           text: `はじめに`,
           children: [
             `/`,
-            `/handson/pokemon.md`
+            `/handson/pokemon.md`,
+            `/handson/tests.md`
           ]
         }
       ],
@@ -34,6 +39,12 @@ export default defineUserConfig<DefaultThemeOptions>({
           text: `Pokemon アプリ`,
           children: [
             `/handson/pokemon.md`
+          ]
+        },
+        {
+          text: `ユニットテスト`,
+          children: [
+            `/handson/tests.md`
           ]
         }
       ]
