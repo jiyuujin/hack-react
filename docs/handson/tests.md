@@ -144,20 +144,23 @@ npm install -D @testing-library/react
 
 母音を抽出しその個数を返すメソッド `findVowels()` と、それに付随するテストを作成してください
 
-ただし、母音は `A|I|U|E|O|a|i|u|e|o` を表しまた `findVowels()` は文字列 `string` 型で受け取って、数値 `number` 型で返すとする
+ただし、母音は `a|i|u|e|o` を表し、大文字・小文字を区別する
+
+また `findVowels()` は文字列 `string` 型で受け取って、数値 `number` 型で返す
 
 ### 税込価格を算出する
 
-税込価格を算出する（軽減税率有の場合は `8%` で、軽減税率無の場合は `10%` を付加する）メソッド `getPaymentTotal()` と、それに付随するテストを作成してください
+税込価格を算出するメソッド `getPaymentTotal()` と、それに付随するテストを作成してください
 
-ただし、この `getPaymentTotal()` は文字列 `string` 型しか受け取ることができず、文字列 `string` 型しか返すことができないとする
+ただし軽減税率有の場合は `8%` の税率を、軽減税率無の場合は `10%` の税率を付加する
+
+また `getPaymentTotal()` は文字列 `string` 型しか受け取ることができず、文字列 `string` 型しか返すことができない
 
 ### 非同期コードをテストする
 
-[Pokemon アプリ](./pokemon.md) でとり上げた [Pokemon API](https://pokeapi.co) について非同期通信の処理メソッドと、それに伴うテストを作成してください
+[Pokemon アプリ](./pokemon.md) でとり上げた [Pokemon API](https://pokeapi.co) における非同期通信の処理メソッドと、それに伴うテストを作成してください
 
-- 非同期通信の処理メソッドは [node-fetch](https://www.npmjs.com/package/node-fetch) を使って書く、また TypeScript で書く場合は専用の型定義用プラグイン [@types/node-fetch](https://www.npmjs.com/package/@types/node-fetch) もインストールする必要がある点に注意する
-- 上記に伴うテストは [fetch-mock](https://www.npmjs.com/package/fetch-mock) を利用しながら非同期通信に使う API のモックを使って書く
+ただし非同期通信の処理メソッドは [node-fetch](https://www.npmjs.com/package/node-fetch) を利用する。ここで TypeScript で書く場合は専用の型定義用プラグイン [@types/node-fetch](https://www.npmjs.com/package/@types/node-fetch) を、上記に伴うテストは [fetch-mock](https://www.npmjs.com/package/fetch-mock) も合わせてインストールしながら非同期通信に使う API のモックを使って書く
 
 ### React で Jest を扱う
 
