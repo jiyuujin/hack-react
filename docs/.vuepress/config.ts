@@ -23,14 +23,13 @@ export default defineUserConfig<DefaultThemeOptions>({
     repo: `jiyuujin/hack-react`,
     editLinks: false,
     docsDir: `docs`,
-    nav: [
+    navbar: [
       {
-        text: `Pokemon アプリ`,
-        link: `/handson/pokemon.md`,
-      },
-      {
-        text: `ユニットテスト`,
-        link: `/handson/tests.md`,
+        text: `ハンズオン`,
+        children: [
+          `/handson/pokemon.md`,
+          `/handson/tests.md`
+        ]
       }
     ],
     sidebarDepth: 3,
