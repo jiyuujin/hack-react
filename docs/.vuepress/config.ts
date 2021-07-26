@@ -45,13 +45,15 @@ export default defineUserConfig<DefaultThemeOptions>({
           ]
         }
       ],
-      '/handson/': [
+      '/handson/pokemon': [
         {
           text: `Pokemon アプリ`,
           children: [
             `/handson/pokemon.md`
           ]
         },
+      ],
+      '/handson/tests': [
         {
           text: `ユニットテスト`,
           children: [
