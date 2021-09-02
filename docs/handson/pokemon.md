@@ -348,4 +348,5 @@ React を書く際なぜ関数コンポーネントを使うべきか、また�
 
 下記アンサー記事も合わせてチェックいただければ幸いです。
 
-[アンサー記事 - ポケモンと共に React を学ぶ](https://webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
+- [SWR v1 リリース - ポケモンと共に React を学ぶ](https://webneko.dev/posts/update-swr-to-v1-on-react-with-pokemon)
+- [アンサー - ポケモンと共に React を学ぶ](https://webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
