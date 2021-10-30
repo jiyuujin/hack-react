@@ -5,6 +5,21 @@ footer: Created © 2021 jiyuujin LAB. All Rights Reserved.
 
 # はじめに
 
+## 執筆者のご紹介
+
+<Profile
+  image="https://pbs.twimg.com/profile_images/1154037739035119620/IX0vq03C_400x400.jpg"
+  name="jiyuujin (Yuma Kitamura)"
+  description="Web の改善を進めている Web デベロッパです。"
+/>
+
+### 詳しくは
+
+プロフィールサイト並びに技術ブログをご確認いただければ幸いです。
+
+- [Web Developer | Yuma Kitamura](https://yuma-kitamura.nekohack.me)
+- [Web猫ブログ](https://webneko.dev)
+
 ## Node.js 環境構築
 
 Node.js バージョン管理のため [nodenv](https://github.com/nodenv/nodenv) をインストールする

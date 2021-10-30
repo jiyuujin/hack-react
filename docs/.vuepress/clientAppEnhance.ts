@@ -1,9 +1,11 @@
 import { defineClientAppEnhance } from '@vuepress/client'
 
-// import Example from './components/Example.vue'
+import Profile from './components/Profile.vue'
 
 export default defineClientAppEnhance(({ app, router, siteData }) => {
   // app.component('MyComponent', Example)
+
+  app.component('Profile', Profile)
 
   if (typeof window !== 'undefined') {
     import('vue-google-adsense')
