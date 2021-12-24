@@ -339,8 +339,21 @@ return (
 
 ## 参照リポジトリ
 
-- [https://github.com/jiyuujin/pokemon](https://github.com/jiyuujin/pokemon/tree/ver.2021.1) (`ver.2021.1` branch)
+- [https://github.com/jiyuujin/pokemon](https://github.com/jiyuujin/pokemon/tree/ver.2021.2) (`ver.2021.2` branch)
 - [https://github.com/nekohack-oss/cra-app](https://github.com/nekohack-oss/cra-app)
+
+#### [`ver.2021.2` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.2)
+
+Please check the CHANGELOG below.
+
+- Update to CRA v5.0
+- Update to SWR v1.0
+
+#### [`ver.2021.1` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.1)
+
+Please check the CHANGELOG below.
+
+- Initialize
 
 ### 補足
 
@@ -348,5 +361,6 @@ React を書く際なぜ関数コンポーネントを使うべきか、また�
 
 下記アンサー記事も合わせてチェックいただければ幸いです。
 
+- [来る React 18 に向けて](https://webneko.dev/posts/upcoming-react-18-in-2022)
 - [SWR v1 リリース - ポケモンと共に React を学ぶ](https://webneko.dev/posts/update-swr-to-v1-on-react-with-pokemon)
 - [アンサー - ポケモンと共に React を学ぶ](https://webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
