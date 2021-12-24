@@ -161,16 +161,25 @@ curl https://pokeapi.co/api/v2/pokemon
 
 :::
 
-バージョン [swr@0.5.6](https://www.npmjs.com/package/swr/v/0.5.6) を使う
+バージョン [swr@1.1.0](https://www.npmjs.com/package/swr/v/1.1.0) を使う
+
+1.0 では、既存の機能を削除せずにライブラリを大幅に小さくした。
+
+- コア 41% 削減 (gzip 圧縮時では 24% 削減)
+- パッケージをインストールした際のサイズ 52% 削減
+- tree-shaking の改善
 
 ```bash
-npm install swr@0.5.6
+npm install swr@1.1.0
 ```
 
 [swr](https://swr.vercel.app) の React カスタムフック `useSWR` を利用してデータをフェッチする
 
+なお、デフォルトの fetcher (データを JSON として解析する fetch の呼出) を提供しなくなった
+
 ```tsx
-const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon?limit=200&offset=200`)
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
+const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon?limit=200&offset=200`, fetcher)
 ```
 
 このポイントとして読み込みに成功した場合はもちろん、読み込み中や読み込みに失敗した場合の挙動を容易に書けることが挙げられる
