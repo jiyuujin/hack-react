@@ -7,11 +7,7 @@ footer: Created © 2021 jiyuujin LAB. All Rights Reserved.
 
 ## 執筆者のご紹介
 
-<Profile
-  image="https://pbs.twimg.com/profile_images/1154037739035119620/IX0vq03C_400x400.jpg"
-  name="jiyuujin (Yuma Kitamura)"
-  description="Web の改善を進めている Web デベロッパです。"
-/>
+<Profile image="https://pbs.twimg.com/profile_images/1154037739035119620/IX0vq03C_400x400.jpg" name="jiyuujin (Yuma Kitamura)" description="Web の改善を進めている Web デベロッパです。" />
 
 ### 詳しくは
 
