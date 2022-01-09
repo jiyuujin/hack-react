@@ -353,22 +353,16 @@ return (
 
 #### [`ver.2021.2` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.2)
 
-Please check the CHANGELOG below.
+[`ver.2021.1` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.1) と比較した際の差分は下記の通り。
 
-- Update to CRA v5.0
-- Update to SWR v1.0
-
-#### [`ver.2021.1` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.1)
-
-Please check the CHANGELOG below.
-
-- Initialize
+- CRA (create-react-app) v5.0 に更新する
+- SWR v1.0 に更新する
 
 ### 補足
 
-React を書く際なぜ関数コンポーネントを使うべきか、また今回扱わなかった `useEffect` についても書かせていただいた。
+React を書く際に関数コンポーネントを使うべき理由や、今回扱わなかった `useEffect` のトリセツ、また来る React 18 についても書かせていただいた。
 
-下記アンサー記事も合わせてチェックいただければ幸いです。
+下記の記事も合わせてチェックいただければ幸いです。
 
 - [来る React 18 に向けて](https://webneko.dev/posts/upcoming-react-18-in-2022)
 - [SWR v1 リリース - ポケモンと共に React を学ぶ](https://webneko.dev/posts/update-swr-to-v1-on-react-with-pokemon)
