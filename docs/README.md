@@ -18,6 +18,23 @@ footer: Created © 2021 jiyuujin LAB. All Rights Reserved.
 
 ## Node.js 環境構築
 
+Node.js バージョン管理ツールを比較してみる
+
+|Name|macOS|Windows|Support|
+|:---|:---|:---|:---|
+|[nodist](https://github.com/nullivex/nodist)|-|✅|`.node-version`<br>`engine.node` in package.json|
+|[fnm](https://github.com/Schniz/fnm)|✅|✅|`.node-version`<br>`.nvmrc`|
+|[n](https://github.com/tj/n)|✅|-|`.n-node-version`<br>`.node-version`<br>`.nvmrc`<br>`engine.node` in package.json|
+|[nave](https://github.com/isaacs/nave)|✅|✅|`.naverc`|
+|[nodebrew](https://github.com/hokaccha/nodebrew)|✅|-|-|
+|[nodenv](https://github.com/nodenv/nodenv)|✅|-|`.node-version`|
+|[nvm](https://github.com/nvm-sh/nvm)|✅|-|`.nvmrc`|
+|[nvm-wind-ows](https://github.com/coreybutler/nvm-windows)|-|✅|-|
+|[nvs](https://github.com/jasongin/nvs)|✅|✅|`.node-version`<br>`nvmrc`|
+|[volta](https://github.com/volta-cli/volta)|✅|✅|`volta.node` in package.json|
+
+### nodenv を使って Node.js バージョンを管理する
+
 Node.js バージョン管理のため [nodenv](https://github.com/nodenv/nodenv) をインストールする
 
 ```bash
