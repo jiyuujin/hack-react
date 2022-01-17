@@ -28,6 +28,8 @@ export default defineUserConfig<DefaultThemeOptions>({
         text: `ハンズオン`,
         children: [
           `/handson/pokemon.md`,
+          `/handson/liff_vite.md`,
+          `/handson/liff_nextjs.md`,
           `/handson/tests.md`
         ]
       }
@@ -40,6 +42,8 @@ export default defineUserConfig<DefaultThemeOptions>({
           children: [
             `/`,
             `/handson/pokemon.md`,
+            `/handson/liff_vite.md`,
+            `/handson/liff_nextjs.md`,
             `/handson/tests.md`
           ]
         }
@@ -51,6 +55,22 @@ export default defineUserConfig<DefaultThemeOptions>({
             `/handson/pokemon.md`
           ]
         },
+      ],
+      '/handson/liff_vite': [
+        {
+          text: `Vite で LIFF アプリ`,
+          children: [
+            `/handson/liff_vite.md`
+          ]
+        }
+      ],
+      '/handson/liff_nextjs': [
+        {
+          text: `Next.js で LIFF アプリ`,
+          children: [
+            `/handson/liff_nextjs.md`
+          ]
+        }
       ],
       '/handson/tests': [
         {
