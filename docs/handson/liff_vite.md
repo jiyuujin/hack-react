@@ -294,6 +294,81 @@ export default Top
 
 表示名は `profile.displayName` より取得できる。
 
+## テスト課題
+
+### アイコン画像を表示する
+
+アイコン画像の表示も、現在のプロフィール情報を取得するために利用した [`liff.getProfile()`](https://developers.line.biz/ja/reference/liff/#get-profile) を使って取得する。
+
+## テスト課題の解答例
+
+### アイコン画像を表示する
+
+::: details 解答例
+アイコン画像の URL 用にステートを準備する。
+
+```tsx
+import React, { useEffect, useState } from 'react'
+
+const Top = () => {
+  const [pictureUrl, setPictureUrl] = useState<string>('')
+
+  useEffect(() => {
+    import('@line/liff').then((liff: any) => {
+      liff
+        .init({ liffId: import.meta.env.VITE_APP_LIFF_ID })
+        .then(() => {
+          setLiffObject(liff)
+          if (liff.isLoggedIn()) {
+            liff
+              .getProfile()
+              .then((profile: any) => {
+                setPictureUrl(profile.pictureUrl)
+              })
+              .catch((err: any) => {
+                console.error({ err })
+              })
+          }
+        })
+        .catch((err: any) => {
+          console.error({ err })
+        })
+    })
+  }, [])
+}
+```
+
+`liff.getProfile()` の戻り値に `pictureUrl` が存在することを確認してください。
+
+```tsx
+import React from 'react'
+
+const Top = () => {
+  return (
+    <>
+      <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            {liffObject?.isLoggedIn() && (
+              <img
+                className="mx-auto h-12 w-auto"
+                src={pictureUrl}
+                alt="picture logo"
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+```
+
+JSX で `pictureUrl` を `<img>` の `src` に設定することでアイコン画像を表示できる。
+
+今回 Web アプリ全体に対し [Tailwind CSS](https://tailwindcss.com/) を利用しているが、よしなりに独自スタイルをあてることも可能なので、随時適応していただければ。
+:::
+
 ## 参照リポジトリ
 
 [https://github.com/jiyuujin/vite-react-liff](https://github.com/jiyuujin/vite-react-liff)
