@@ -300,6 +300,10 @@ export default Top
 
 アイコン画像の表示も、現在のプロフィール情報を取得するために利用した [`liff.getProfile()`](https://developers.line.biz/ja/reference/liff/#get-profile) を使って取得する。
 
+### メッセージを送信する
+
+メッセージの送信は [`liff.sendMessages()`](https://developers.line.biz/ja/reference/liff/#send-messages) を使う。なお、外部の Web ブラウザからアクセスできないことに注意する。
+
 ## テスト課題の解答例
 
 ### アイコン画像を表示する
@@ -369,6 +373,51 @@ JSX で `pictureUrl` を `<img>` の `src` に設定することでアイコン�
 今回 Web アプリ全体に対し [Tailwind CSS](https://tailwindcss.com/) を利用しているが、よしなりに独自スタイルをあてることも可能なので、随時適応していただければ。
 :::
 
+### メッセージを送信する
+
+::: details 解答例
+ボタンとそれに付随する実行メソッド `sendMessages()` を準備する。
+
+```tsx
+import React from 'react'
+
+const Top = () => {
+  const sendMessages = async () => {
+    await liffObject.sendMessages([
+      {
+        type: 'text',
+        text: 'Hello World',
+      },
+    ])
+  }
+
+  return (
+    <>
+      <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              {liffObject?.isLoggedIn() && (
+                <button
+                  onClick={sendMessages}
+                  type="button"
+                  className="w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Send Messages
+                </button>
+              )}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+```
+
+これをもって LINE アプリ内の Web ブラウザで確認する。
+:::
+
 ## 参照リポジトリ
 
 [https://github.com/jiyuujin/vite-react-liff](https://github.com/jiyuujin/vite-react-liff)
@@ -376,6 +425,10 @@ JSX で `pictureUrl` を `<img>` の `src` に設定することでアイコン�
 また Vite 上で React を動作させる [サンプル](https://github.com/nekohack-oss/vite-react) と合わせ、参考にしていただければ幸いです。
 
 ### CHANGELOG
+
+#### [`ver.2022.3` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3)
+
+LINE アプリ内の Web ブラウザでメッセージを送信する。
 
 #### [`ver.2022.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.2)
 
