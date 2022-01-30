@@ -382,7 +382,11 @@ const Top = () => {
 
 ### CHANGELOG
 
-#### [`ver.2022.4` branch](https://github.com/jiyuujin/nextjs-liff/tree/ver.2022.4)
+#### [`ver.2022.4.2` branch](https://github.com/jiyuujin/nextjs-liff/tree/ver.2022.4.2)
+
+`shareTargetPicker` を利用して外部の Web ブラウザで LINE にメッセージを送信する。
+
+#### [`ver.2022.4.1` branch](https://github.com/jiyuujin/nextjs-liff/tree/ver.2022.4.1)
 
 LINE アプリ内の Web ブラウザでメッセージを送信する。
 
