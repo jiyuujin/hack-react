@@ -28,7 +28,7 @@ npm install
 
 ### localhost で起動する
 
-[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK
+[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK です。
 
 ```bash
 # next dev
@@ -80,7 +80,7 @@ npm install
 
 #### localhost で起動する
 
-[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK
+[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK です。
 
 ```bash
 # next dev
@@ -327,6 +327,7 @@ const Top = () => {
 JSX で `pictureUrl` を `<img>` の `src` に設定することでアイコン画像を表示できる。
 
 今回 Web アプリ全体に対し [Tailwind CSS](https://tailwindcss.com/) を利用しているが、よしなりに独自スタイルをあてることも可能なので、随時適応していただければ。
+
 :::
 
 ### メッセージを送信する
@@ -372,6 +373,7 @@ const Top = () => {
 ```
 
 これをもって LINE アプリ内の Web ブラウザで確認する。
+
 :::
 
 ## 参照リポジトリ

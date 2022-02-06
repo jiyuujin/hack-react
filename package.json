@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "textlint": "textlint ./docs/**",
+    "textlint:fix": "textlint ./docs/** --fix",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
@@ -13,6 +15,10 @@
   },
   "devDependencies": {
     "@types/node": "^16.3.1",
+    "textlint": "^12.1.0",
+    "textlint-rule-preset-ja-spacing": "^2.2.0",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
     "typescript": "^4.3.5"
   }
 }
