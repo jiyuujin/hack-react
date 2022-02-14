@@ -1,5 +1,7 @@
 # Pokemon アプリ
 
+<HistoryTags :tags="['React', 'CRA', 'Pokemon']" />
+
 目指すゴールはフロントエンドライブラリ [React](https://ja.reactjs.org) でひとつの Web アプリを作ること。無料で使える [Pokemon API](https://pokeapi.co) を [SWR](https://swr.vercel.app) を利用してフェッチして多種多様なポケモンを見られるようにする。
 
 実際の成果物は [Vercel](https://vercel.com) にデプロイを済ませており [Hack Pokemon](https://hack-pokemon.vercel.app) をご確認いただければ幸いです。

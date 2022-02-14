@@ -1,5 +1,7 @@
 # ユニットテスト
 
+<HistoryTags :tags="['TypeScript', 'Jest', 'Mocha', 'Jasmine']" />
+
 フロントエンドには主に 3 点のユニットテストが存在する。
 
 - [Jasmine](https://jasmine.github.io)

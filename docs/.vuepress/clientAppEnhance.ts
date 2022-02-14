@@ -1,11 +1,13 @@
 import { defineClientAppEnhance } from '@vuepress/client'
 
 import Profile from './components/Profile.vue'
+import HistoryTags from './components/HistoryTags.vue'
 
 export default defineClientAppEnhance(({ app, router, siteData }) => {
   // app.component('MyComponent', Example)
 
   app.component('Profile', Profile)
+  app.component('HistoryTags', HistoryTags)
 
   if (typeof window !== 'undefined') {
     import('vue-google-adsense')
