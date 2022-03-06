@@ -81,5 +81,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         }
       ]
     }
+  },
+  markdown: {
+    toc: { level: [1, 2] }
+  },
+  extendsMarkdown: (md) => {
+    md.use(require('@nekohack/markdown-it-link-preview'))
   }
 })
