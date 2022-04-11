@@ -35,6 +35,10 @@ LIFF は LINE Front-end Framework の略で [LINE 社](https://linecorp.com/) �
 
 ### CHANGELOG
 
+#### [`ver.2022.4` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4)
+
+React 18 に対応している。
+
 #### [`ver.2022.3.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.2)
 
 `shareTargetPicker` を利用して外部ブラウザで LINE にメッセージを送信する。
