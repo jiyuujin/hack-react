@@ -14,7 +14,9 @@ LIFF は LINE Front-end Framework の略で [LINE 社](https://linecorp.com/) �
 
 ## 執筆済みの教材
 
-WIP
+今回の教材は [Zenn](https://zenn.dev/) を利用しています。
+
+[@preview](https://zenn.dev/jiyuujin/articles/liff-on-nextjs)
 
 ## テスト課題
 
@@ -28,6 +30,10 @@ WIP
 また Next.js 上で React を動作させる [サンプル](https://github.com/nekohack-oss/nextjs) と合わせ、参考にしていただければ幸いです。
 
 ### CHANGELOG
+
+#### [`ver.2022.5` branch](https://github.com/jiyuujin/nextjs-liff/tree/ver.2022.5)
+
+React 18 (Next.js 12) に対応している。
 
 #### [`ver.2022.4.2` branch](https://github.com/jiyuujin/nextjs-liff/tree/ver.2022.4.2)
 
