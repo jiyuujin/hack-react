@@ -355,12 +355,26 @@ return (
 - [https://github.com/jiyuujin/pokemon](https://github.com/jiyuujin/pokemon/tree/ver.2021.2) (`ver.2021.2` branch)
 - [https://github.com/nekohack-oss/cra-app](https://github.com/nekohack-oss/cra-app)
 
+### CHANGELOG
+
+#### [`ver.2022.1.2` branch](https://github.com/jiyuujin/pokemon/tree/ver.2022.1.2)
+
+- カスタム ESLint の設定を適用する
+- [ ] Node.js 16 runtime を利用した Vercel へのデプロイ
+
+#### [`ver.2022.1.1` branch](https://github.com/jiyuujin/pokemon/tree/ver.2022.1.1)
+
+- React v18.0 に更新する
+
 #### [`ver.2021.2` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.2)
 
-[`ver.2021.1` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.1) と比較した際の差分は下記の通り。
-
 - CRA (create-react-app) v5.0 に更新する
-- SWR v1.0 に更新する
+- SWR v1.0.0 に更新する
+
+#### [`ver.2021.1` branch](https://github.com/jiyuujin/pokemon/tree/ver.2021.1)
+
+- CRA (create-react-app) v4.0 上で Pokemon API をフェッチする
+- SWR v0.5.6 を利用する
 
 ### 補足
 
@@ -368,6 +382,7 @@ React を書く際に関数コンポーネントを使うべき理由や、今�
 
 下記の記事も合わせてチェックいただければ幸いです。
 
+- [React 18 へ移行するにあたって](https://webneko.dev/posts/migrate-to-react-18)
 - [来る React 18 に向けて](https://webneko.dev/posts/upcoming-react-18-in-2022)
 - [SWR v1 リリース - ポケモンと共に React を学ぶ](https://webneko.dev/posts/update-swr-to-v1-on-react-with-pokemon)
 - [アンサー - ポケモンと共に React を学ぶ](https://webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
