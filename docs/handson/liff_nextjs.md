@@ -54,3 +54,11 @@ LINE Front-end Framework を利用して LINE 認証を実装している。
 #### [`ver.2022.1` branch](https://github.com/jiyuujin/nextjs-liff/tree/ver.2022.1)
 
 Firebase Authentication の Google 認証を実装している。
+
+### 補足
+
+Next.js 12 以降、利用可能な [Middleware](https://nextjs.org/docs/advanced-features/middleware) を使って Bot よりカスタムメッセージを返せることについても書かせていただいた。
+
+下記の記事も合わせてチェックいただければ幸いです。
+
+- [LINE と共に React (Next.js) を学ぶ](https://webneko.dev/posts/the-answer-to-learn-nextjs-with-line)

@@ -62,3 +62,11 @@ React Router を [v6](https://remix.run/blog/react-router-v6) に更新してい
 #### [`ver.2021.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.1)
 
 Firebase Authentication の Google 認証を実装している。
+
+### 補足
+
+2021 年 12 月の React Conf 2021 で発表された StrictMode が与える影響についても書かせていただいた。
+
+下記の記事も合わせてチェックいただければ幸いです。
+
+- [LINE と共に React (Vite) を学ぶ](https://webneko.dev/posts/the-answer-to-learn-react-with-line)
