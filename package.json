@@ -3,16 +3,16 @@
   "author": "yuukit <yuma.kitamura@ponos.co.jp>",
   "private": true,
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
     "textlint": "textlint ./docs/**",
     "textlint:fix": "textlint ./docs/** --fix",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@nekohack/markdown-it-link-preview": "^1.0.6",
-    "vue-google-adsense": "^1.9.3",
-    "vuepress": "^2.0.0-beta.22"
+    "vue-google-adsense": "^2.0.0",
+    "vitepress": "^1.0.0-alpha.1"
   },
   "devDependencies": {
     "@types/node": "^16.3.1",
