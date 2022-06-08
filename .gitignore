@@ -4,7 +4,7 @@ yarn.lock
 
 .idea
 
-docs/.vuepress/dist
+docs/.vitepress/dist
 
 .DS_Store
 
