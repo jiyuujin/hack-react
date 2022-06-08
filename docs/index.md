@@ -45,7 +45,7 @@ cd ~/.nodenv && src/configure && make -C src
 
 PATH を設定するため Vim に入る。
 
-```badh
+```bash
 sudo vi ~/.zshrc
 ```
 
