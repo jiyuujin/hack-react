@@ -26,7 +26,7 @@ npm install
 
 ### localhost で起動する
 
-[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK です。
+`http://localhost:3000` が Web ブラウザで開けば OK です。
 
 ```bash
 # react-scripts start
@@ -382,7 +382,7 @@ React を書く際に関数コンポーネントを使うべき理由や、今�
 
 下記の記事も合わせてチェックいただければ幸いです。
 
-- [React 18 へ移行するにあたって](https://webneko.dev/posts/migrate-to-react-18)
-- [来る React 18 に向けて](https://webneko.dev/posts/upcoming-react-18-in-2022)
-- [SWR v1 リリース - ポケモンと共に React を学ぶ](https://webneko.dev/posts/update-swr-to-v1-on-react-with-pokemon)
-- [アンサー - ポケモンと共に React を学ぶ](https://webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
+- [React 18 へ移行するにあたって](https://nuxt2.webneko.dev/posts/migrate-to-react-18)
+- [来る React 18 に向けて](https://nuxt2.webneko.dev/posts/upcoming-react-18-in-2022)
+- [SWR v1 リリース - ポケモンと共に React を学ぶ](https://nuxt2.webneko.dev/posts/update-swr-to-v1-on-react-with-pokemon)
+- [アンサー - ポケモンと共に React を学ぶ](https://nuxt2.webneko.dev/posts/the-answer-to-react-beginners-with-pokemon)
