@@ -46,9 +46,9 @@ export default {
     ]
   },
   markdown: {
-    toc: { level: [1, 2] }
-  },
-  extendsMarkdown: (md) => {
-    md.use(require('@nekohack/markdown-it-link-preview'))
+    toc: { level: [1, 2] },
+    config: (md) => {
+      md.use(require('@nekohack/markdown-it-link-preview'))
+    }
   }
 }
