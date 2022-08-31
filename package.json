@@ -12,7 +12,7 @@
   "dependencies": {
     "@nekohack/markdown-it-link-preview": "^1.0.6",
     "vitepress": "1.0.0-alpha.1",
-    "vue-google-adsense": "^2.0.0"
+    "vue-lite-youtube-embed": "^1.0.4"
   },
   "devDependencies": {
     "@types/node": "^16.3.1",
