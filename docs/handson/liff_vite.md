@@ -20,7 +20,11 @@ LIFF は LINE Front-end Framework の略で [LINE 社](https://linecorp.com/) �
 
 3 月 3 日当日の動画は、アーカイヴ化されています。
 
+動画の詳細は [こちら](https://www.youtube.com/watch?v=D8GeQyrueEY) よりご確認いただけます。
+
+<!--
 <YouTubeVideo video-id="D8GeQyrueEY" title="Vite x React ハンズオン" />
+-->
 
 ## テスト課題
 
